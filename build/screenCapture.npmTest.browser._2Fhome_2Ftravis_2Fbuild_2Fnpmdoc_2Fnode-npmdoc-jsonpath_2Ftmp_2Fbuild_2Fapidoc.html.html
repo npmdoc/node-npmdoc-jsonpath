@@ -1,0 +1,2531 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/dchester/jsonpath#readme">jsonpath (v0.2.11)</a>
+</h1>
+<h4>Query JavaScript objects with JSONPath expressions. Robust / safe JSONPath engine for Node.js.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath">module jsonpath</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath">
+            function <span class="apidocSignatureSpan">jsonpath.</span>JSONPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers">
+            function <span class="apidocSignatureSpan">jsonpath.</span>JSONPath.Handlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>jsonpath</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.</span>JSONPath.Handlers.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.</span>JSONPath.Handlers.prototype._fns</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.</span>JSONPath.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.</span>aesprim</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.</span>aesprim_browser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.</span>handlers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.</span>parser</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.JSONPath">module jsonpath.JSONPath</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.JSONPath">
+            function <span class="apidocSignatureSpan">jsonpath.</span>JSONPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.</span>Handlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Parser">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.</span>Parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.JSONPath.Handlers">module jsonpath.JSONPath.Handlers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.Handlers">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.</span>Handlers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.JSONPath.Handlers.prototype">module jsonpath.JSONPath.Handlers.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype.initialize">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>initialize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype.keys">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>keys
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype.register">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>register
+            <span class="apidocSignatureSpan">(key, handler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype.resolve">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>resolve
+            <span class="apidocSignatureSpan">(component)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>_fns</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.JSONPath.Handlers.prototype._fns">module jsonpath.JSONPath.Handlers.prototype._fns</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-identifier">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-child-identifier
+            <span class="apidocSignatureSpan">(component, partial)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-numeric_literal">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-child-numeric_literal
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-script_expression">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-child-script_expression
+            <span class="apidocSignatureSpan">(component, partial)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-wildcard">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-child-wildcard
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-identifier">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-descendant-identifier
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-numeric_literal">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-descendant-numeric_literal
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-script_expression">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-descendant-script_expression
+            <span class="apidocSignatureSpan">(component, partial)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-wildcard">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-descendant-wildcard
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-filter_expression">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-filter_expression
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-numeric_literal">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-numeric_literal
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-script_expression">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-script_expression
+            <span class="apidocSignatureSpan">(component, partial)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-slice">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-slice
+            <span class="apidocSignatureSpan">(component, partial)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-string_literal">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-string_literal
+            <span class="apidocSignatureSpan">(component, partial)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-union">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-union
+            <span class="apidocSignatureSpan">(component, partial)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-wildcard">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-wildcard
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-filter_expression">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-filter_expression
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-numeric_literal">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-numeric_literal
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-string_literal">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-string_literal
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-union">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-union
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-wildcard">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-wildcard
+            <span class="apidocSignatureSpan">(component, partial, count)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.JSONPath.prototype">module jsonpath.JSONPath.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype._normalize">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>_normalize
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype._vivify">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>_vivify
+            <span class="apidocSignatureSpan">(obj, string, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.apply">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>apply
+            <span class="apidocSignatureSpan">(obj, string, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.initialize">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>initialize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.nodes">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>nodes
+            <span class="apidocSignatureSpan">(obj, string, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.parent">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>parent
+            <span class="apidocSignatureSpan">(obj, string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.parse">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>parse
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.paths">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>paths
+            <span class="apidocSignatureSpan">(obj, string, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.query">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>query
+            <span class="apidocSignatureSpan">(obj, string, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.stringify">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>stringify
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.JSONPath.prototype.value">
+            function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>value
+            <span class="apidocSignatureSpan">(obj, path, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.aesprim">module jsonpath.aesprim</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.aesprim.parse">
+            function <span class="apidocSignatureSpan">jsonpath.aesprim.</span>parse
+            <span class="apidocSignatureSpan">(code, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.aesprim.tokenize">
+            function <span class="apidocSignatureSpan">jsonpath.aesprim.</span>tokenize
+            <span class="apidocSignatureSpan">(code, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.aesprim.</span>Syntax</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jsonpath.aesprim.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.aesprim_browser">module jsonpath.aesprim_browser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.aesprim_browser.parse">
+            function <span class="apidocSignatureSpan">jsonpath.aesprim_browser.</span>parse
+            <span class="apidocSignatureSpan">(code, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.aesprim_browser.tokenize">
+            function <span class="apidocSignatureSpan">jsonpath.aesprim_browser.</span>tokenize
+            <span class="apidocSignatureSpan">(code, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.aesprim_browser.</span>Syntax</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jsonpath.aesprim_browser.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.handlers">module jsonpath.handlers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.handlers.descend">
+            function <span class="apidocSignatureSpan">jsonpath.handlers.</span>descend
+            <span class="apidocSignatureSpan">(partial, ref, passable, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.handlers.traverse">
+            function <span class="apidocSignatureSpan">jsonpath.handlers.</span>traverse
+            <span class="apidocSignatureSpan">(partial, ref, passable, count)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.jsonpath">module jsonpath.jsonpath</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.jsonpath.JSONPath">
+            function <span class="apidocSignatureSpan">jsonpath.jsonpath.</span>JSONPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.jsonpath.</span>handlers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.jsonpath.</span>parser</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jsonpath.parser">module jsonpath.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.parser.Parser">
+            function <span class="apidocSignatureSpan">jsonpath.parser.</span>Parser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.parser.main">
+            function <span class="apidocSignatureSpan">jsonpath.parser.</span>main
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jsonpath.parser.parse">
+            function <span class="apidocSignatureSpan">jsonpath.parser.</span>parse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jsonpath.</span>parser</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath" id="apidoc.module.jsonpath">module jsonpath</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath" id="apidoc.element.jsonpath.JSONPath">
+        function <span class="apidocSignatureSpan">jsonpath.</span>JSONPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JSONPath = function () {
+  this.initialize.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers" id="apidoc.element.jsonpath.JSONPath.Handlers">
+        function <span class="apidocSignatureSpan">jsonpath.</span>JSONPath.Handlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JSONPath.Handlers = function () {
+  return this.initialize.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.JSONPath" id="apidoc.module.jsonpath.JSONPath">module jsonpath.JSONPath</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.JSONPath" id="apidoc.element.jsonpath.JSONPath.JSONPath">
+        function <span class="apidocSignatureSpan">jsonpath.</span>JSONPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JSONPath = function () {
+  this.initialize.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers" id="apidoc.element.jsonpath.JSONPath.Handlers">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.</span>Handlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Handlers = function () {
+  return this.initialize.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Parser" id="apidoc.element.jsonpath.JSONPath.Parser">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.</span>Parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Parser = function () {
+
+  var parser = new gparser.Parser();
+
+  var _parseError = parser.parseError;
+  parser.yy.parseError = function() {
+    if (parser.yy.ast) {
+      parser.yy.ast.initialize();
+    }
+    _parseError.apply(parser, arguments);
+  }
+
+  return parser;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+},{"./dict":2,"./handlers":4,"./parser":6,"assert":8}],6:[function(require,module,exports
+){
+var grammar = require('./grammar');
+var gparser = require('../generated/parser');
+
+var Parser = function() {
+
+var parser = new gparser.<span class="apidocCodeKeywordSpan">Parser</span>();
+
+var _parseError = parser.parseError;
+parser.yy.parseError = function() {
+  if (parser.yy.ast) {
+    parser.yy.ast.initialize();
+  }
+  _parseError.apply(parser, arguments);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.JSONPath.Handlers" id="apidoc.module.jsonpath.JSONPath.Handlers">module jsonpath.JSONPath.Handlers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.Handlers" id="apidoc.element.jsonpath.JSONPath.Handlers.Handlers">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.</span>Handlers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Handlers = function () {
+  return this.initialize.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.JSONPath.Handlers.prototype" id="apidoc.module.jsonpath.JSONPath.Handlers.prototype">module jsonpath.JSONPath.Handlers.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype.initialize" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype.initialize">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>initialize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function () {
+  this.traverse = traverser(true);
+  this.descend = traverser();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+terminals_: {2:"error",4:"DOLLAR",12:"DOT",14:"DOT_DOT",15:"STAR",16:"IDENTIFIER
+",17:"SCRIPT_EXPRESSION",18:"INTEGER",19:"END",22:"[",24:"]",28:",&amp;#
+x22;,30:"ARRAY_SLICE",31:"FILTER_EXPRESSION",32:"QQ_STRING",33:"Q_STRING"},
+productions_: [0,[3,1],[3,2],[3,1],[3,2],[5,1],[5,2],[7,1],[7,1],[8,1],[8,1],[10,2],[6,1],[11,2],[13,1],[13,1],[13,1],[13,1],[13
+,1],[9,1],[9,1],[20,3],[21,4],[23,1],[23,1],[26,1],[26,3],[27,1],[27,1],[27,1],[25,1],[25,1],[25,1],[29,1],[29,1]],
+performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */
+/**/) {
+/* this == yyval */
+if (!yy.ast) {
+    yy.ast = _ast;
+    _ast.<span class="apidocCodeKeywordSpan">initialize</span>();
+}
+
+var $0 = $$.length - 1;
+switch (yystate) {
+case 1:yy.ast.set({ expression: { type: "root", value: $$[$0] } }); yy.ast.unshift(); return yy.ast.yield()
+break;
+case 2:yy.ast.set({ expression: { type: "root", value: $$[$0-1] } }); yy.ast.unshift(); return yy.ast.yield()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype.keys" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype.keys">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>keys
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function keys() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  value.forEach(function(element, index) {
+    if (results.length &gt;= count) { return }
+    if (recurse) {
+      descend(element, path.concat(index));
+    }
+  });
+} else if (is_object(value)) {
+  this.<span class="apidocCodeKeywordSpan">keys</span>(value).forEach(function(k) {
+    if (results.length &gt;= count) { return }
+    if (passable(k, value[k], ref)) {
+      results.push({ path: path.concat(k), value: value[k] });
+    }
+  })
+  this.keys(value).forEach(function(k) {
+    if (results.length &gt;= count) { return }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype.register" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype.register">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>register
+        <span class="apidocSignatureSpan">(key, handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">register = function (key, handler) {
+
+  if (!handler instanceof Function) {
+    throw new Error("handler must be a function");
+  }
+
+  this._fns[key] = handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype.resolve" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype.resolve">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype.</span>resolve
+        <span class="apidocSignatureSpan">(component)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (component) {
+
+  var key = [ component.operation, component.scope, component.expression.type ].join('-');
+  var method = this._fns[key];
+
+  if (!method) throw new Error("couldn't resolve key: " + key);
+  return method.bind(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+        STRING_LITERAL: [
+                [ 'QQ_STRING', "$$ = $1" ],
+                [ 'Q_STRING',  "$$ = $1" ] ]
+    }
+};
+if (fs.readFileSync) {
+  grammar.moduleInclude = fs.readFileSync(require.<span class="apidocCodeKeywordSpan">resolve</span>("../include/module.js&amp;#
+x22;));
+  grammar.actionInclude = fs.readFileSync(require.resolve("../include/action.js"));
+}
+
+module.exports = grammar;
+
+},{"./dict":2,"fs":9}],4:[function(require,module,exports){
+var aesprim = require('./aesprim');
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.JSONPath.Handlers.prototype._fns" id="apidoc.module.jsonpath.JSONPath.Handlers.prototype._fns">module jsonpath.JSONPath.Handlers.prototype._fns</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-identifier" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-identifier">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-child-identifier
+        <span class="apidocSignatureSpan">(component, partial)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">member-child-identifier = function (component, partial) {
+  var key = component.expression.value;
+  var value = partial.value;
+  if (value instanceof Object &amp;&amp; key in value) {
+    return [ { value: value[key], path: partial.path.concat(key) } ]
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-numeric_literal" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-numeric_literal">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-child-numeric_literal
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">member-child-numeric_literal = function (component, partial, count) {
+  return this.descend(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-script_expression" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-script_expression">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-child-script_expression
+        <span class="apidocSignatureSpan">(component, partial)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">member-child-script_expression = function (component, partial) {
+  var exp = component.expression.value.slice(1, -1);
+  return eval_recurse(partial, exp, '$.{{value}}');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-wildcard" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-child-wildcard">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-child-wildcard
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">member-child-wildcard = function (component, partial, count) {
+  return this.descend(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-identifier" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-identifier">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-descendant-identifier
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">member-descendant-identifier = function (component, partial, count) {
+  return this.traverse(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-numeric_literal" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-numeric_literal">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-descendant-numeric_literal
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">member-descendant-numeric_literal = function (component, partial, count) {
+  return this.traverse(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-script_expression" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-script_expression">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-descendant-script_expression
+        <span class="apidocSignatureSpan">(component, partial)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">member-descendant-script_expression = function (component, partial) {
+  var exp = component.expression.value.slice(1, -1);
+  return eval_recurse(partial, exp, '$..value');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-wildcard" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.member-descendant-wildcard">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>member-descendant-wildcard
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">member-descendant-wildcard = function (component, partial, count) {
+  return this.traverse(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-filter_expression" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-filter_expression">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-filter_expression
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-child-filter_expression = function (component, partial, count) {
+
+  // slice out the expression from ?(expression)
+  var src = component.expression.value.slice(2, -1);
+  var ast = aesprim.parse(src).body[0].expression;
+
+  var passable = function(key, value) {
+    return evaluate(ast, { '@': value });
+  }
+
+  return this.descend(partial, null, passable, count);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-numeric_literal" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-numeric_literal">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-numeric_literal
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-child-numeric_literal = function (component, partial, count) {
+  return this.descend(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-script_expression" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-script_expression">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-script_expression
+        <span class="apidocSignatureSpan">(component, partial)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-child-script_expression = function (component, partial) {
+  var exp = component.expression.value.slice(1, -1);
+  return eval_recurse(partial, exp, '$[{{value}}]');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-slice" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-slice">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-slice
+        <span class="apidocSignatureSpan">(component, partial)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-child-slice = function (component, partial) {
+  if (is_array(partial.value)) {
+    var args = component.expression.value.split(':').map(_parse_nullable_int);
+    var values = partial.value.map(function(v, i) { return { value: v, path: partial.path.concat(i) } });
+    return slice.apply(null, [values].concat(args));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-string_literal" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-string_literal">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-string_literal
+        <span class="apidocSignatureSpan">(component, partial)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-child-string_literal = function (component, partial) {
+  var key = component.expression.value;
+  var value = partial.value;
+  if (value instanceof Object &amp;&amp; key in value) {
+    return [ { value: value[key], path: partial.path.concat(key) } ]
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-union" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-union">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-union
+        <span class="apidocSignatureSpan">(component, partial)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-child-union = function (component, partial) {
+  var results = [];
+  component.expression.value.forEach(function(component) {
+    var _component = { operation: 'subscript', scope: 'child', expression: component.expression };
+    var handler = this.resolve(_component);
+    var _results = handler(_component, partial);
+    if (_results) {
+      results = results.concat(_results);
+    }
+  }, this);
+
+  return unique(results);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-wildcard" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-child-wildcard">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-child-wildcard
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-child-wildcard = function (component, partial, count) {
+  return this.descend(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-filter_expression" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-filter_expression">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-filter_expression
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-descendant-filter_expression = function (component, partial, count) {
+
+  // slice out the expression from ?(expression)
+  var src = component.expression.value.slice(2, -1);
+  var ast = aesprim.parse(src).body[0].expression;
+
+  var passable = function(key, value) {
+    return evaluate(ast, { '@': value });
+  }
+
+  return this.traverse(partial, null, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-numeric_literal" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-numeric_literal">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-numeric_literal
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-descendant-numeric_literal = function (component, partial, count) {
+  return this.traverse(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-string_literal" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-string_literal">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-string_literal
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-descendant-string_literal = function (component, partial, count) {
+  return this.traverse(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-union" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-union">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-union
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-descendant-union = function (component, partial, count) {
+
+  var jp = require('..');
+  var self = this;
+
+  var results = [];
+  var nodes = jp.nodes(partial, '$..*').slice(1);
+
+  nodes.forEach(function(node) {
+    if (results.length &gt;= count) return;
+    component.expression.value.forEach(function(component) {
+      var _component = { operation: 'subscript', scope: 'child', expression: component.expression };
+      var handler = self.resolve(_component);
+      var _results = handler(_component, node);
+      results = results.concat(_results);
+    });
+  });
+
+  return unique(results);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-wildcard" id="apidoc.element.jsonpath.JSONPath.Handlers.prototype._fns.subscript-descendant-wildcard">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.Handlers.prototype._fns.</span>subscript-descendant-wildcard
+        <span class="apidocSignatureSpan">(component, partial, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subscript-descendant-wildcard = function (component, partial, count) {
+  return this.traverse(partial, component.expression.value, passable, count);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.JSONPath.prototype" id="apidoc.module.jsonpath.JSONPath.prototype">module jsonpath.JSONPath.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype._normalize" id="apidoc.element.jsonpath.JSONPath.prototype._normalize">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>_normalize
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_normalize = function (path) {
+
+  assert.ok(path, "we need a path");
+
+  if (typeof path == "string") {
+
+    return this.parser.parse(path);
+
+  } else if (Array.isArray(path) &amp;&amp; typeof path[0] == "string") {
+
+    var _path = [ { expression: { type: "root", value: "$" } } ];
+
+    path.forEach(function(component, index) {
+
+      if (component == '$' &amp;&amp; index === 0) return;
+
+      if (typeof component == "string" &amp;&amp; component.match("^" + dict.identifier + "$")) {
+
+        _path.push({
+          operation: 'member',
+          scope: 'child',
+          expression: { value: component, type: 'identifier' }
+        });
+
+      } else {
+
+        var type = typeof component == "number" ?
+          'numeric_literal' : 'string_literal';
+
+        _path.push({
+          operation: 'subscript',
+          scope: 'child',
+          expression: { value: component, type: type }
+        });
+      }
+    });
+
+    return _path;
+
+  } else if (Array.isArray(path) &amp;&amp; typeof path[0] == "object") {
+
+    return path
+  }
+
+  throw new Error("couldn't understand path " + path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var templates = {
+'descendant-member': '..{{value}}',
+'child-member': '.{{value}}',
+'descendant-subscript': '..[{{value}}]',
+'child-subscript': '[{{value}}]'
+  };
+
+  path = this.<span class="apidocCodeKeywordSpan">_normalize</span>(path);
+
+  path.forEach(function(component) {
+
+if (component.expression.type == 'root') return;
+
+var key = [component.scope, component.operation].join('-');
+var template = templates[key];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype._vivify" id="apidoc.element.jsonpath.JSONPath.prototype._vivify">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>_vivify
+        <span class="apidocSignatureSpan">(obj, string, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_vivify = function (obj, string, value) {
+
+  var self = this;
+
+  assert.ok(obj instanceof Object, "obj needs to be an object");
+  assert.ok(string, "we need a path");
+
+  var path = this.parser.parse(string)
+    .map(function(component) { return component.expression.value });
+
+  var setValue = function(path, value) {
+    var key = path.pop();
+    var node = self.value(obj, path);
+    if (!node) {
+      setValue(path.concat(), typeof key === 'string' ? {} : []);
+      node = self.value(obj, path);
+    }
+    node[key] = value;
+  }
+  setValue(path, value);
+  return this.query(obj, string)[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+JSONPath.prototype.value = function(obj, path, value) {
+
+  assert.ok(obj instanceof Object, "obj needs to be an object");
+  assert.ok(path, "we need a path");
+
+  if (arguments.length &gt;= 3) {
+    var node = this.nodes(obj, path).shift();
+    if (!node) return this.<span class="apidocCodeKeywordSpan">_vivify</span>(obj, path, value);
+    var key = node.path.slice(-1).shift();
+    var parent = this.parent(obj, this.stringify(node.path));
+    parent[key] = value;
+  }
+  return this.query(obj, this.stringify(path), 1).shift();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.apply" id="apidoc.element.jsonpath.JSONPath.prototype.apply">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>apply
+        <span class="apidocSignatureSpan">(obj, string, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">apply = function (obj, string, fn) {
+
+  assert.ok(obj instanceof Object, "obj needs to be an object");
+  assert.ok(string, "we need a path");
+  assert.equal(typeof fn, "function", "fn needs to be function")
+
+  var nodes = this.nodes(obj, string).sort(function(a, b) {
+    // sort nodes so we apply from the bottom up
+    return b.path.length - a.path.length;
+  });
+
+  nodes.forEach(function(node) {
+    var key = node.path.pop();
+    var parent = this.value(obj, this.stringify(node.path));
+    var val = node.value = fn.call(obj, parent[key]);
+    parent[key] = val;
+  }, this);
+
+  return nodes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Returns the value of the first element matching `pathExpression`.  If `newValue` is provided, sets the value of the first matching
+ element and returns the new value.
+
+#### jp.parent(obj, pathExpression)
+
+Returns the parent of the first matching element.
+
+#### jp.<span class="apidocCodeKeywordSpan">apply</span>(obj, pathExpression, fn)
+
+Runs the supplied function `fn` on each matching element, and replaces each matching element with the return value from the function
+.  The function accepts the value of the matching element as its only parameter.  Returns matching nodes with their updated values
+.
+
+
+```javascript
+var nodes = jp.apply(data, '$..author', function(value) { return value.toUpperCase() });
+// [
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.initialize" id="apidoc.element.jsonpath.JSONPath.prototype.initialize">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>initialize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initialize = function () {
+  this.parser = new Parser();
+  this.handlers = new Handlers();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+terminals_: {2:"error",4:"DOLLAR",12:"DOT",14:"DOT_DOT",15:"STAR",16:"IDENTIFIER
+",17:"SCRIPT_EXPRESSION",18:"INTEGER",19:"END",22:"[",24:"]",28:",&amp;#
+x22;,30:"ARRAY_SLICE",31:"FILTER_EXPRESSION",32:"QQ_STRING",33:"Q_STRING"},
+productions_: [0,[3,1],[3,2],[3,1],[3,2],[5,1],[5,2],[7,1],[7,1],[8,1],[8,1],[10,2],[6,1],[11,2],[13,1],[13,1],[13,1],[13,1],[13
+,1],[9,1],[9,1],[20,3],[21,4],[23,1],[23,1],[26,1],[26,3],[27,1],[27,1],[27,1],[25,1],[25,1],[25,1],[29,1],[29,1]],
+performAction: function anonymous(yytext, yyleng, yylineno, yy, yystate /* action[1] */, $$ /* vstack */, _$ /* lstack */
+/**/) {
+/* this == yyval */
+if (!yy.ast) {
+    yy.ast = _ast;
+    _ast.<span class="apidocCodeKeywordSpan">initialize</span>();
+}
+
+var $0 = $$.length - 1;
+switch (yystate) {
+case 1:yy.ast.set({ expression: { type: "root", value: $$[$0] } }); yy.ast.unshift(); return yy.ast.yield()
+break;
+case 2:yy.ast.set({ expression: { type: "root", value: $$[$0-1] } }); yy.ast.unshift(); return yy.ast.yield()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.nodes" id="apidoc.element.jsonpath.JSONPath.prototype.nodes">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>nodes
+        <span class="apidocSignatureSpan">(obj, string, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nodes = function (obj, string, count) {
+
+  assert.ok(obj instanceof Object, "obj needs to be an object");
+  assert.ok(string, "we need a path");
+
+  if (count === 0) return [];
+
+  var path = this.parser.parse(string);
+  var handlers = this.handlers;
+
+  var partials = [ { path: ['$'], value: obj } ];
+  var matches = [];
+
+  if (path.length &amp;&amp; path[0].expression.type == 'root') path.shift();
+
+  if (!path.length) return partials;
+
+  path.forEach(function(component, index) {
+
+    if (matches.length &gt;= count) return;
+    var handler = handlers.resolve(component);
+    var _partials = [];
+
+    partials.forEach(function(p) {
+
+      if (matches.length &gt;= count) return;
+      var results = handler(component, p, count);
+
+      if (index == path.length - 1) {
+        // if we're through the components we're done
+        matches = matches.concat(results || []);
+      } else {
+        // otherwise accumulate and carry on through
+        _partials = _partials.concat(results || []);
+      }
+    });
+
+    partials = _partials;
+
+  });
+
+  return count ? matches.slice(0, count) : matches;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//   ['$', 'store', 'book', 0, 'author'] },
+//   ['$', 'store', 'book', 1, 'author'] },
+//   ['$', 'store', 'book', 2, 'author'] },
+//   ['$', 'store', 'book', 3, 'author'] }
+// ]
+```
+
+#### jp.<span class="apidocCodeKeywordSpan">nodes</span>(obj, pathExpression[, count])
+
+Find elements and their corresponding paths in `obj` matching `pathExpression`.  Returns an array of node objects where each node
+ has a `path` containing an array of keys representing the location within `obj`, and a `value` pointing to the matched element.
+Returns only first `count` nodes if specified.
+
+```javascript
+var nodes = jp.nodes(data, '$..author');
+// [
+//   { path: ['$', 'store', 'book', 0, 'author'], value: 'Nigel Rees' },
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.parent" id="apidoc.element.jsonpath.JSONPath.prototype.parent">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>parent
+        <span class="apidocSignatureSpan">(obj, string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parent = function (obj, string) {
+
+  assert.ok(obj instanceof Object, "obj needs to be an object");
+  assert.ok(string, "we need a path");
+
+  var node = this.nodes(obj, string)[0];
+  var key = node.path.pop();<span class="apidocCodeCommentSpan"> /* jshint unused:false */
+</span>  return this.value(obj, node.path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// ]
+```
+
+#### jp.value(obj, pathExpression[, newValue])
+
+Returns the value of the first element matching `pathExpression`.  If `newValue` is provided, sets the value of the first matching
+ element and returns the new value.
+
+#### jp.<span class="apidocCodeKeywordSpan">parent</span>(obj, pathExpression)
+
+Returns the parent of the first matching element.
+
+#### jp.apply(obj, pathExpression, fn)
+
+Runs the supplied function `fn` on each matching element, and replaces each matching element with the return value from the function
+.  The function accepts the value of the matching element as its only parameter.  Returns matching nodes with their updated values
+.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.parse" id="apidoc.element.jsonpath.JSONPath.prototype.parse">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>parse
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (string) {
+  assert.ok(_is_string(string), "we need a path");
+  return this.parser.parse(string);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//   { path: ['$', 'store', 'book', 0, 'author'], value: 'NIGEL REES' },
+//   { path: ['$', 'store', 'book', 1, 'author'], value: 'EVELYN WAUGH' },
+//   { path: ['$', 'store', 'book', 2, 'author'], value: 'HERMAN MELVILLE' },
+//   { path: ['$', 'store', 'book', 3, 'author'], value: 'J. R. R. TOLKIEN' }
+// ]
+```
+
+#### jp.<span class="apidocCodeKeywordSpan">parse</span>(pathExpression)
+
+Parse the provided JSONPath expression into path components and their associated operations.
+
+```javascript
+var path = jp.parse('$..author');
+// [
+//   { expression: { type: 'root', value: '$' } },
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.paths" id="apidoc.element.jsonpath.JSONPath.prototype.paths">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>paths
+        <span class="apidocSignatureSpan">(obj, string, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">paths = function (obj, string, count) {
+
+  assert.ok(obj instanceof Object, "obj needs to be an object");
+  assert.ok(string, "we need a path");
+
+  var results = this.nodes(obj, string, count)
+    .map(function(r) { return r.path });
+
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Find elements in `obj` matching `pathExpression`.  Returns an array of elements that satisfy the provided JSONPath expression, or
+ an empty array if none were matched.  Returns only first `count` elements if specified.
+
+```javascript
+var authors = jp.query(data, '$..author');
+// [ 'Nigel Rees', 'Evelyn Waugh', 'Herman Melville', 'J. R. R. Tolkien' ]
+```
+
+#### jp.<span class="apidocCodeKeywordSpan">paths</span>(obj, pathExpression[, count])
+
+Find paths to elements in `obj` matching `pathExpression`.  Returns an array of element paths that satisfy the provided JSONPath
+ expression. Each path is itself an array of keys representing the location within `obj` of the matching element.  Returns only
+first `count` paths if specified.
+
+
+```javascript
+var paths = jp.paths(data, '$..author');
+// [
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.query" id="apidoc.element.jsonpath.JSONPath.prototype.query">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>query
+        <span class="apidocSignatureSpan">(obj, string, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (obj, string, count) {
+
+  assert.ok(obj instanceof Object, "obj needs to be an object");
+  assert.ok(_is_string(string), "we need a path");
+
+  var results = this.nodes(obj, string, count)
+    .map(function(r) { return r.value });
+
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  { name: "London", "population": 8615246 },
+  { name: "Berlin", "population": 3517424 },
+  { name: "Madrid", "population": 3165235 },
+  { name: "Rome",   "population": 2870528 }
+];
+
+var jp = require('jsonpath');
+var names = jp.<span class="apidocCodeKeywordSpan">query</span>(cities, '$..name');
+
+// [ "London", "Berlin", "Madrid", "Rome" ]
+```
+
+## Install
+
+Install from npm:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.stringify" id="apidoc.element.jsonpath.JSONPath.prototype.stringify">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>stringify
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stringify = function (path) {
+
+  assert.ok(path, "we need a path");
+
+  var string = '$';
+
+  var templates = {
+    'descendant-member': '..{{value}}',
+    'child-member': '.{{value}}',
+    'descendant-subscript': '..[{{value}}]',
+    'child-subscript': '[{{value}}]'
+  };
+
+  path = this._normalize(path);
+
+  path.forEach(function(component) {
+
+    if (component.expression.type == 'root') return;
+
+    var key = [component.scope, component.operation].join('-');
+    var template = templates[key];
+    var value;
+
+    if (component.expression.type == 'string_literal') {
+      value = JSON.stringify(component.expression.value)
+    } else {
+      value = component.expression.value;
+    }
+
+    if (!template) throw new Error("couldn't find template " + key);
+
+    string += template.replace(/{{value}}/, value);
+  });
+
+  return string;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var path = jp.parse('$..author');
+// [
+//   { expression: { type: 'root', value: '$' } },
+//   { expression: { type: 'identifier', value: 'author' }, operation: 'member', scope: 'descendant
+' }
+// ]
+```
+
+#### jp.<span class="apidocCodeKeywordSpan">stringify</span>(path)
+
+Returns a path expression in string form, given a path.  The supplied path may either be a flat array of keys, as returned by `jp
+.nodes` for example, or may alternatively be a fully parsed path expression in the form of an array of path components as returned
+ by `jp.parse`.
+
+```javascript
+var pathExpression = jp.stringify(['$', 'store', 'book', 0, 'author']);
+// "$.store.book[0].author"
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.JSONPath.prototype.value" id="apidoc.element.jsonpath.JSONPath.prototype.value">
+        function <span class="apidocSignatureSpan">jsonpath.JSONPath.prototype.</span>value
+        <span class="apidocSignatureSpan">(obj, path, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">value = function (obj, path, value) {
+
+  assert.ok(obj instanceof Object, "obj needs to be an object");
+  assert.ok(path, "we need a path");
+
+  if (arguments.length &gt;= 3) {
+    var node = this.nodes(obj, path).shift();
+    if (!node) return this._vivify(obj, path, value);
+    var key = node.path.slice(-1).shift();
+    var parent = this.parent(obj, this.stringify(node.path));
+    parent[key] = value;
+  }
+  return this.query(obj, this.stringify(path), 1).shift();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//   { path: ['$', 'store', 'book', 0, 'author'], value: 'Nigel Rees' },
+//   { path: ['$', 'store', 'book', 1, 'author'], value: 'Evelyn Waugh' },
+//   { path: ['$', 'store', 'book', 2, 'author'], value: 'Herman Melville' },
+//   { path: ['$', 'store', 'book', 3, 'author'], value: 'J. R. R. Tolkien' }
+// ]
+```
+
+#### jp.<span class="apidocCodeKeywordSpan">value</span>(obj, pathExpression[, newValue])
+
+Returns the value of the first element matching `pathExpression`.  If `newValue` is provided, sets the value of the first matching
+ element and returns the new value.
+
+#### jp.parent(obj, pathExpression)
+
+Returns the parent of the first matching element.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.aesprim" id="apidoc.module.jsonpath.aesprim">module jsonpath.aesprim</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.aesprim.parse" id="apidoc.element.jsonpath.aesprim.parse">
+        function <span class="apidocSignatureSpan">jsonpath.aesprim.</span>parse
+        <span class="apidocSignatureSpan">(code, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(code, options) {
+    var program, toString;
+
+    toString = String;
+    if (typeof code !== 'string' &amp;&amp; !(code instanceof String)) {
+        code = toString(code);
+    }
+
+    delegate = SyntaxTreeDelegate;
+    source = code;
+    index = 0;
+    lineNumber = (source.length &gt; 0) ? 1 : 0;
+    lineStart = 0;
+    length = source.length;
+    lookahead = null;
+    state = {
+        allowIn: true,
+        labelSet: {},
+        inFunctionBody: false,
+        inIteration: false,
+        inSwitch: false,
+        lastCommentStart: -1
+    };
+
+    extra = {};
+    if (typeof options !== 'undefined') {
+        extra.range = (typeof options.range === 'boolean') &amp;&amp; options.range;
+        extra.loc = (typeof options.loc === 'boolean') &amp;&amp; options.loc;
+        extra.attachComment = (typeof options.attachComment === 'boolean') &amp;&amp; options.attachComment;
+
+        if (extra.loc &amp;&amp; options.source !== null &amp;&amp; options.source !== undefined) {
+            extra.source = toString(options.source);
+        }
+
+        if (typeof options.tokens === 'boolean' &amp;&amp; options.tokens) {
+            extra.tokens = [];
+        }
+        if (typeof options.comment === 'boolean' &amp;&amp; options.comment) {
+            extra.comments = [];
+        }
+        if (typeof options.tolerant === 'boolean' &amp;&amp; options.tolerant) {
+            extra.errors = [];
+        }
+        if (extra.attachComment) {
+            extra.range = true;
+            extra.comments = [];
+            extra.bottomRightStack = [];
+            extra.trailingComments = [];
+            extra.leadingComments = [];
+        }
+    }
+
+    try {
+        program = parseProgram();
+        if (typeof extra.comments !== 'undefined') {
+            program.comments = extra.comments;
+        }
+        if (typeof extra.tokens !== 'undefined') {
+            filterTokenLocation();
+            program.tokens = extra.tokens;
+        }
+        if (typeof extra.errors !== 'undefined') {
+            program.errors = extra.errors;
+        }
+    } catch (e) {
+        throw e;
+    } finally {
+        extra = {};
+    }
+
+    return program;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//   { path: ['$', 'store', 'book', 0, 'author'], value: 'NIGEL REES' },
+//   { path: ['$', 'store', 'book', 1, 'author'], value: 'EVELYN WAUGH' },
+//   { path: ['$', 'store', 'book', 2, 'author'], value: 'HERMAN MELVILLE' },
+//   { path: ['$', 'store', 'book', 3, 'author'], value: 'J. R. R. TOLKIEN' }
+// ]
+```
+
+#### jp.<span class="apidocCodeKeywordSpan">parse</span>(pathExpression)
+
+Parse the provided JSONPath expression into path components and their associated operations.
+
+```javascript
+var path = jp.parse('$..author');
+// [
+//   { expression: { type: 'root', value: '$' } },
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.aesprim.tokenize" id="apidoc.element.jsonpath.aesprim.tokenize">
+        function <span class="apidocSignatureSpan">jsonpath.aesprim.</span>tokenize
+        <span class="apidocSignatureSpan">(code, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tokenize(code, options) {
+    var toString,
+        token,
+        tokens;
+
+    toString = String;
+    if (typeof code !== 'string' &amp;&amp; !(code instanceof String)) {
+        code = toString(code);
+    }
+
+    delegate = SyntaxTreeDelegate;
+    source = code;
+    index = 0;
+    lineNumber = (source.length &gt; 0) ? 1 : 0;
+    lineStart = 0;
+    length = source.length;
+    lookahead = null;
+    state = {
+        allowIn: true,
+        labelSet: {},
+        inFunctionBody: false,
+        inIteration: false,
+        inSwitch: false,
+        lastCommentStart: -1
+    };
+
+    extra = {};
+
+    // Options matching.
+    options = options || {};
+
+    // Of course we collect tokens here.
+    options.tokens = true;
+    extra.tokens = [];
+    extra.tokenize = true;
+    // The following two fields are necessary to compute the Regex tokens.
+    extra.openParenToken = -1;
+    extra.openCurlyToken = -1;
+
+    extra.range = (typeof options.range === 'boolean') &amp;&amp; options.range;
+    extra.loc = (typeof options.loc === 'boolean') &amp;&amp; options.loc;
+
+    if (typeof options.comment === 'boolean' &amp;&amp; options.comment) {
+        extra.comments = [];
+    }
+    if (typeof options.tolerant === 'boolean' &amp;&amp; options.tolerant) {
+        extra.errors = [];
+    }
+
+    try {
+        peek();
+        if (lookahead.type === Token.EOF) {
+            return extra.tokens;
+        }
+
+        token = lex();
+        while (lookahead.type !== Token.EOF) {
+            try {
+                token = lex();
+            } catch (lexError) {
+                token = lookahead;
+                if (extra.errors) {
+                    extra.errors.push(lexError);
+                    // We have to break on the first error
+                    // to avoid infinite loops.
+                    break;
+                } else {
+                    throw lexError;
+                }
+            }
+        }
+
+        filterTokenLocation();
+        tokens = extra.tokens;
+        if (typeof extra.comments !== 'undefined') {
+            tokens.comments = extra.comments;
+        }
+        if (typeof extra.errors !== 'undefined') {
+            tokens.errors = extra.errors;
+        }
+    } catch (e) {
+        throw e;
+    } finally {
+        extra = {};
+    }
+    return tokens;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.aesprim_browser" id="apidoc.module.jsonpath.aesprim_browser">module jsonpath.aesprim_browser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.aesprim_browser.parse" id="apidoc.element.jsonpath.aesprim_browser.parse">
+        function <span class="apidocSignatureSpan">jsonpath.aesprim_browser.</span>parse
+        <span class="apidocSignatureSpan">(code, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(code, options) {
+    var program, toString;
+
+    toString = String;
+    if (typeof code !== 'string' &amp;&amp; !(code instanceof String)) {
+        code = toString(code);
+    }
+
+    delegate = SyntaxTreeDelegate;
+    source = code;
+    index = 0;
+    lineNumber = (source.length &gt; 0) ? 1 : 0;
+    lineStart = 0;
+    length = source.length;
+    lookahead = null;
+    state = {
+        allowIn: true,
+        labelSet: {},
+        inFunctionBody: false,
+        inIteration: false,
+        inSwitch: false,
+        lastCommentStart: -1
+    };
+
+    extra = {};
+    if (typeof options !== 'undefined') {
+        extra.range = (typeof options.range === 'boolean') &amp;&amp; options.range;
+        extra.loc = (typeof options.loc === 'boolean') &amp;&amp; options.loc;
+        extra.attachComment = (typeof options.attachComment === 'boolean') &amp;&amp; options.attachComment;
+
+        if (extra.loc &amp;&amp; options.source !== null &amp;&amp; options.source !== undefined) {
+            extra.source = toString(options.source);
+        }
+
+        if (typeof options.tokens === 'boolean' &amp;&amp; options.tokens) {
+            extra.tokens = [];
+        }
+        if (typeof options.comment === 'boolean' &amp;&amp; options.comment) {
+            extra.comments = [];
+        }
+        if (typeof options.tolerant === 'boolean' &amp;&amp; options.tolerant) {
+            extra.errors = [];
+        }
+        if (extra.attachComment) {
+            extra.range = true;
+            extra.comments = [];
+            extra.bottomRightStack = [];
+            extra.trailingComments = [];
+            extra.leadingComments = [];
+        }
+    }
+
+    try {
+        program = parseProgram();
+        if (typeof extra.comments !== 'undefined') {
+            program.comments = extra.comments;
+        }
+        if (typeof extra.tokens !== 'undefined') {
+            filterTokenLocation();
+            program.tokens = extra.tokens;
+        }
+        if (typeof extra.errors !== 'undefined') {
+            program.errors = extra.errors;
+        }
+    } catch (e) {
+        throw e;
+    } finally {
+        extra = {};
+    }
+
+    return program;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//   { path: ['$', 'store', 'book', 0, 'author'], value: 'NIGEL REES' },
+//   { path: ['$', 'store', 'book', 1, 'author'], value: 'EVELYN WAUGH' },
+//   { path: ['$', 'store', 'book', 2, 'author'], value: 'HERMAN MELVILLE' },
+//   { path: ['$', 'store', 'book', 3, 'author'], value: 'J. R. R. TOLKIEN' }
+// ]
+```
+
+#### jp.<span class="apidocCodeKeywordSpan">parse</span>(pathExpression)
+
+Parse the provided JSONPath expression into path components and their associated operations.
+
+```javascript
+var path = jp.parse('$..author');
+// [
+//   { expression: { type: 'root', value: '$' } },
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.aesprim_browser.tokenize" id="apidoc.element.jsonpath.aesprim_browser.tokenize">
+        function <span class="apidocSignatureSpan">jsonpath.aesprim_browser.</span>tokenize
+        <span class="apidocSignatureSpan">(code, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tokenize(code, options) {
+    var toString,
+        token,
+        tokens;
+
+    toString = String;
+    if (typeof code !== 'string' &amp;&amp; !(code instanceof String)) {
+        code = toString(code);
+    }
+
+    delegate = SyntaxTreeDelegate;
+    source = code;
+    index = 0;
+    lineNumber = (source.length &gt; 0) ? 1 : 0;
+    lineStart = 0;
+    length = source.length;
+    lookahead = null;
+    state = {
+        allowIn: true,
+        labelSet: {},
+        inFunctionBody: false,
+        inIteration: false,
+        inSwitch: false,
+        lastCommentStart: -1
+    };
+
+    extra = {};
+
+    // Options matching.
+    options = options || {};
+
+    // Of course we collect tokens here.
+    options.tokens = true;
+    extra.tokens = [];
+    extra.tokenize = true;
+    // The following two fields are necessary to compute the Regex tokens.
+    extra.openParenToken = -1;
+    extra.openCurlyToken = -1;
+
+    extra.range = (typeof options.range === 'boolean') &amp;&amp; options.range;
+    extra.loc = (typeof options.loc === 'boolean') &amp;&amp; options.loc;
+
+    if (typeof options.comment === 'boolean' &amp;&amp; options.comment) {
+        extra.comments = [];
+    }
+    if (typeof options.tolerant === 'boolean' &amp;&amp; options.tolerant) {
+        extra.errors = [];
+    }
+
+    try {
+        peek();
+        if (lookahead.type === Token.EOF) {
+            return extra.tokens;
+        }
+
+        token = lex();
+        while (lookahead.type !== Token.EOF) {
+            try {
+                token = lex();
+            } catch (lexError) {
+                token = lookahead;
+                if (extra.errors) {
+                    extra.errors.push(lexError);
+                    // We have to break on the first error
+                    // to avoid infinite loops.
+                    break;
+                } else {
+                    throw lexError;
+                }
+            }
+        }
+
+        filterTokenLocation();
+        tokens = extra.tokens;
+        if (typeof extra.comments !== 'undefined') {
+            tokens.comments = extra.comments;
+        }
+        if (typeof extra.errors !== 'undefined') {
+            tokens.errors = extra.errors;
+        }
+    } catch (e) {
+        throw e;
+    } finally {
+        extra = {};
+    }
+    return tokens;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.handlers" id="apidoc.module.jsonpath.handlers">module jsonpath.handlers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.handlers.descend" id="apidoc.element.jsonpath.handlers.descend">
+        function <span class="apidocSignatureSpan">jsonpath.handlers.</span>descend
+        <span class="apidocSignatureSpan">(partial, ref, passable, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">descend = function (partial, ref, passable, count) {
+
+  var value = partial.value;
+  var path = partial.path;
+
+  var results = [];
+
+  var descend = function(value, path) {
+
+    if (is_array(value)) {
+      value.forEach(function(element, index) {
+        if (results.length &gt;= count) { return }
+        if (passable(index, element, ref)) {
+          results.push({ path: path.concat(index), value: element });
+        }
+      });
+      value.forEach(function(element, index) {
+        if (results.length &gt;= count) { return }
+        if (recurse) {
+          descend(element, path.concat(index));
+        }
+      });
+    } else if (is_object(value)) {
+      this.keys(value).forEach(function(k) {
+        if (results.length &gt;= count) { return }
+        if (passable(k, value[k], ref)) {
+          results.push({ path: path.concat(k), value: value[k] });
+        }
+      })
+      this.keys(value).forEach(function(k) {
+        if (results.length &gt;= count) { return }
+        if (recurse) {
+          descend(value[k], path.concat(k));
+        }
+      });
+    }
+  }.bind(this);
+  descend(value, path);
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var src = component.expression.value.slice(2, -1);
+var ast = aesprim.parse(src).body[0].expression;
+
+var passable = function(key, value) {
+  return evaluate(ast, { '@': value });
+}
+
+return this.<span class="apidocCodeKeywordSpan">descend</span>(partial, null, passable, count);
+
+  },
+
+  'subscript-descendant-filter_expression': function(component, partial, count) {
+
+// slice out the expression from ?(expression)
+var src = component.expression.value.slice(2, -1);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.handlers.traverse" id="apidoc.element.jsonpath.handlers.traverse">
+        function <span class="apidocSignatureSpan">jsonpath.handlers.</span>traverse
+        <span class="apidocSignatureSpan">(partial, ref, passable, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traverse = function (partial, ref, passable, count) {
+
+  var value = partial.value;
+  var path = partial.path;
+
+  var results = [];
+
+  var descend = function(value, path) {
+
+    if (is_array(value)) {
+      value.forEach(function(element, index) {
+        if (results.length &gt;= count) { return }
+        if (passable(index, element, ref)) {
+          results.push({ path: path.concat(index), value: element });
+        }
+      });
+      value.forEach(function(element, index) {
+        if (results.length &gt;= count) { return }
+        if (recurse) {
+          descend(element, path.concat(index));
+        }
+      });
+    } else if (is_object(value)) {
+      this.keys(value).forEach(function(k) {
+        if (results.length &gt;= count) { return }
+        if (passable(k, value[k], ref)) {
+          results.push({ path: path.concat(k), value: value[k] });
+        }
+      })
+      this.keys(value).forEach(function(k) {
+        if (results.length &gt;= count) { return }
+        if (recurse) {
+          descend(value[k], path.concat(k));
+        }
+      });
+    }
+  }.bind(this);
+  descend(value, path);
+  return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var src = component.expression.value.slice(2, -1);
+  var ast = aesprim.parse(src).body[0].expression;
+
+  var passable = function(key, value) {
+    return evaluate(ast, { '@': value });
+  }
+
+  return this.<span class="apidocCodeKeywordSpan">traverse</span>(partial, null, passable, count);
+},
+
+'subscript-child-script_expression': function(component, partial) {
+  var exp = component.expression.value.slice(1, -1);
+  return eval_recurse(partial, exp, '$[{{value}}]');
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.jsonpath" id="apidoc.module.jsonpath.jsonpath">module jsonpath.jsonpath</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.jsonpath.JSONPath" id="apidoc.element.jsonpath.jsonpath.JSONPath">
+        function <span class="apidocSignatureSpan">jsonpath.jsonpath.</span>JSONPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JSONPath = function () {
+  this.initialize.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jsonpath.parser" id="apidoc.module.jsonpath.parser">module jsonpath.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.parser.Parser" id="apidoc.element.jsonpath.parser.Parser">
+        function <span class="apidocSignatureSpan">jsonpath.parser.</span>Parser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser() {
+  this.yy = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+},{"./dict":2,"./handlers":4,"./parser":6,"assert":8}],6:[function(require,module,exports
+){
+var grammar = require('./grammar');
+var gparser = require('../generated/parser');
+
+var Parser = function() {
+
+var parser = new gparser.<span class="apidocCodeKeywordSpan">Parser</span>();
+
+var _parseError = parser.parseError;
+parser.yy.parseError = function() {
+  if (parser.yy.ast) {
+    parser.yy.ast.initialize();
+  }
+  _parseError.apply(parser, arguments);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.parser.main" id="apidoc.element.jsonpath.parser.main">
+        function <span class="apidocSignatureSpan">jsonpath.parser.</span>main
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function commonjsMain(args) {
+    if (!args[1]) {
+        console.log('Usage: '+args[0]+' FILE');
+        process.exit(1);
+    }
+    var source = require('fs').readFileSync(require('path').normalize(args[1]), "utf8");
+    return exports.parser.parse(source);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        console.log('Usage: '+args[0]+' FILE');
+        process.exit(1);
+    }
+    var source = require('fs').readFileSync(require('path').normalize(args[1]), "utf8");
+    return exports.parser.parse(source);
+};
+if (typeof module !== 'undefined' &amp;&amp; require.main === module) {
+  exports.<span class="apidocCodeKeywordSpan">main</span>(process.argv.slice(1));
+}
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jsonpath.parser.parse" id="apidoc.element.jsonpath.parser.parse">
+        function <span class="apidocSignatureSpan">jsonpath.parser.</span>parse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function () { return parser.parse.apply(parser, arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//   { path: ['$', 'store', 'book', 0, 'author'], value: 'NIGEL REES' },
+//   { path: ['$', 'store', 'book', 1, 'author'], value: 'EVELYN WAUGH' },
+//   { path: ['$', 'store', 'book', 2, 'author'], value: 'HERMAN MELVILLE' },
+//   { path: ['$', 'store', 'book', 3, 'author'], value: 'J. R. R. TOLKIEN' }
+// ]
+```
+
+#### jp.<span class="apidocCodeKeywordSpan">parse</span>(pathExpression)
+
+Parse the provided JSONPath expression into path components and their associated operations.
+
+```javascript
+var path = jp.parse('$..author');
+// [
+//   { expression: { type: 'root', value: '$' } },
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
